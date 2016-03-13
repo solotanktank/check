@@ -5,7 +5,7 @@
 --------------------------------------------------------------------------------]]
 if not FileExist(COMMON_PATH.."\SmiteGod.lua") then
  print("Khong tim thay SmiteGod trong thu muc, vui long cho")
- DownloadFileAsync("https://raw.githubusercontent.com/qqwer1/GoS-Lua/master/SmiteGod.lua", COMMON_PATH.."MixLib.lua", function() PrintChat("Cap nhat hoan tat SmiteGod. Hay nhan F6 x2 de load lai script tong hop!") end) return
+ DownloadFileAsync("https://raw.githubusercontent.com/qqwer1/GoS-Lua/master/SmiteGod.lua", COMMON_PATH.."SmiteGod.lua", function() PrintChat("Cap nhat hoan tat SmiteGod. Hay nhan F6 x2 de load lai script tong hop!") end) return
 end
 
 
