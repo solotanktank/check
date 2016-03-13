@@ -3,6 +3,11 @@
 	Trang chủ GOS: gamingonsteroids.com
 	Script được làm bởi R-N. Khi copy, di chuyển script vui lòng để lại nguồn.
 --------------------------------------------------------------------------------]]
+if not FileExist(COMMON_PATH.."\SmiteGod.lua") then
+ print("Khong tim thay SmiteGod trong thu muc, vui long cho")
+ DownloadFileAsync("https://raw.githubusercontent.com/qqwer1/GoS-Lua/master/SmiteGod.lua", COMMON_PATH.."MixLib.lua", function() PrintChat("Cap nhat hoan tat SmiteGod. Hay nhan F6 x2 de load lai script tong hop!") end) return
+end
+
 
 require('Inspired')
 
@@ -46,7 +51,7 @@ function OneFile:ChampSupported()
 		["Kayle"] = {"Royal Kayle", "Simple Kayle"},
 		["Kennen"] = {"KennenBae"},
 		["KhaZix"] = {"InnateSeries KhaZix"},
-		["KogMaw"] = {"SxcSAIO Kog'Maw"},
+		["KogMaw"] = {"SxcSAIO Kog'Maw", "NEETSeries Kog'Maw"},
 		["LeBlanc"] = {"KMS LeBlanc"},
 		["LeeSin"] = {"CS Lee Sin"},
 		["Leona"] = {"SxcSAIO Leona"},
@@ -94,7 +99,7 @@ function OneFile:LoadMenu()
 	self.cfg = MenuConfig("OneFile", "Script Tong Hop")
 		self.cfg:Menu("c", "Chon script cho "..myHero.charName)
 		if self.supported[myHero.charName] ~= nil then
-			self.cfg.c:DropDown("p", "Chon script:", 1, self.supported[myHero.charName], function() self:Print("F6 x2 de thay doi script ho tro cho tuong.") end)
+			self.cfg.c:DropDown("p", "Chon script:", 1, self.supported[myHero.charName], function() self:PrintScriptChange() end)
 		else
 			self.cfg.c:Info("info", "Tuong nay hien khong co script nao ho tro")
         end
@@ -109,6 +114,7 @@ function OneFile:LoadMenu()
 			self.cfg.u:Boolean("e6", "Load Paint (DmgCheck)", false, function() self:PrintUtility(self.cfg.u.e6:Value(), "Paint") end)
 			self.cfg.u:Boolean("e7", "Load SmoothEvade", true, function() self:PrintUtility(self.cfg.u.e7:Value(), "SmoothEvade") end)
 			self.cfg.u:Boolean("e8", "Load Aimbot", false, function() self:PrintUtility(self.cfg.u.e8:Value(), "AimBot") end)
+			self.cfg.u:Boolean("e9", "Load SmiteGod", false, function() self:PrintUtility(self.cfg.u.e8:Value(), "SmiteGod") end)
 end
 
 function OneFile:LoadScriptChamp()
@@ -286,6 +292,12 @@ function OneFile:LoadUtility()
 	if self.cfg.u.e6:Value() then require('draw') end
 	if self.cfg.u.e7:Value() then require('SmoothEvade') end
 	if self.cfg.u.e8:Value() then require('Aimbot') end
+	if self.cfg.u.e9:Value() then require('SmiteGod') end
+end
+
+function OneFile:PrintScriptChange()
+    if self.supported[myHero.charName] == nil then return end
+    self:Print("Da chuyen sang su dung script "..self.supported[myHero.charName][self.cfg.c.p:Value()]..". Nhan F6 x2 de thay doi.")
 end
 
 function OneFile:PrintUtility(boolean, text)
@@ -295,7 +307,7 @@ end
 
 function OneFile:CheckUpdate()
     self.Update = {}
-    self.Update.ScriptVersion = 0.01
+    self.Update.ScriptVersion = 0.02
     self.Update.UseHttps = true
     self.Update.Host = "raw.githubusercontent.com"
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
