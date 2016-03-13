@@ -3,13 +3,12 @@
 	Trang chủ GOS: gamingonsteroids.com
 	Script được làm bởi R-N. Khi copy, di chuyển script vui lòng để lại nguồn.
 --------------------------------------------------------------------------------]]
+require('Inspired')
+
 if not FileExist(COMMON_PATH.."SmiteGod.lua") then
  print("Khong tim thay SmiteGod trong thu muc, vui long cho")
  DownloadFileAsync("https://raw.githubusercontent.com/qqwer1/GoS-Lua/master/SmiteGod.lua", COMMON_PATH.."SmiteGod.lua", function() PrintChat("Cap nhat hoan tat SmiteGod. Hay nhan F6 x2 de load lai script tong hop!") end) return
 end
-
-
-require('Inspired')
 
 class "OneFile"
 function OneFile:__init()
@@ -312,7 +311,7 @@ end
 
 function OneFile:CheckUpdate()
     self.Update = {}
-    self.Update.ScriptVersion = 0.021
+    self.Update.ScriptVersion = 0.022
     self.Update.UseHttps = true
     self.Update.Host = "raw.githubusercontent.com"
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
