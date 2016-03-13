@@ -51,7 +51,7 @@ function OneFile:ChampSupported()
 		["Kayle"] = {"Royal Kayle", "Simple Kayle"},
 		["Kennen"] = {"KennenBae"},
 		["KhaZix"] = {"InnateSeries KhaZix"},
-		["KogMaw"] = {"SxcSAIO Kog'Maw", "NEETSeries Kog'Maw"},
+		["KogMaw"] = {"NEETSeries Kog'Maw", "SxcSAIO Kog'Maw"},
 		["LeBlanc"] = {"KMS LeBlanc"},
 		["LeeSin"] = {"CS Lee Sin"},
 		["Leona"] = {"SxcSAIO Leona"},
