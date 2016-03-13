@@ -212,7 +212,12 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Kennen" and v == 1 then require('kennenBae')
     elseif n == "KhaZix" and v == 1 then require('IS_khazix')
-    elseif n == "KogMaw" and v == 1 then require('SxcSAIO')
+    elseif n == "KogMaw" then
+      if v == 1 then
+        require('NEETSeries')
+      elseif v == 2 then
+        require('SxcSAIO')
+      end
     elseif n == "LeBlanc" and v == 1 then require('KrystraMidBundle')
     elseif n == "LeeSin" and v == 1 then require('ChallengerSeries')
     elseif n == "Leona" and v == 1 then require('SxcSAIO')
@@ -307,7 +312,7 @@ end
 
 function OneFile:CheckUpdate()
     self.Update = {}
-    self.Update.ScriptVersion = 0.02
+    self.Update.ScriptVersion = 0.021
     self.Update.UseHttps = true
     self.Update.Host = "raw.githubusercontent.com"
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
