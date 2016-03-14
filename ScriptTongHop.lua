@@ -330,11 +330,11 @@ end
 
 function OneFile:Hello()
    if self.supported[myHero.charName] ~= nil then
-    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> Script tuong dang su dung: %s</font>",self.supported[myHero.charName][self.cfg.c.p:Value()]))
+    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> Script tướng đang dùng: %s</font>",self.supported[myHero.charName][self.cfg.c.p:Value()]))
    else
-    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> Tuong ban dang dung hien khong co script nao ho tro.</font>"))
+    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> Tướng bạn đang chơi hiện chưa có scipts nào hổ trợ.</font>"))
    end
-    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> Script duoc viet boi R-N. http://toollienminhmienphi.blogspot.com/ <u>%s</u></font>",GetUser()))
+    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> Script Được Viết Bởi R-N. http://toollienminhmienphi.blogspot.com/ <u><<==</u></font>",GetUser()))
 end
 
 if OneFile then OneFile() end
