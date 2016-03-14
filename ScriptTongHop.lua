@@ -334,7 +334,7 @@ function OneFile:Hello()
    else
     PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> Tuong ban dang dung hien khong co script nao ho tro.</font>"))
    end
-    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> Script duoc viet boi R-N. Good Luck <u>%s</u></font>",GetUser()))
+    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> Script duoc viet boi R-N. http://toollienminhmienphi.blogspot.com/ <u>%s</u></font>",GetUser()))
 end
 
 if OneFile then OneFile() end
