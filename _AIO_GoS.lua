@@ -1,7 +1,7 @@
 --[[ ONE FOR ALL GOS
-	Script dùng để tổng hợp tất cả các script hiện tại của tool GOS.
-	Trang chủ GOS: gamingonsteroids.com
-	Script được viết bởi RN. Khi copy/di chuyển vui lòng để lại nguồn
+    Script dùng để tổng hợp tất cả các script hiện tại của tool GOS.
+    Trang chủ GOS: gamingonsteroids.com
+    Script được viết bởi RN. Khi copy/di chuyển vui lòng để lại nguồn
 --------------------------------------------------------------------------------]]
 
 class "OneFile"
@@ -9,8 +9,8 @@ function OneFile:__init()
     self:ChampSupported()
     self:CheckUpdate()
     self:LoadMenu()
-	self:LoadScriptChamp()
-	self:LoadUtility()
+    self:LoadScriptChamp()
+    self:LoadUtility()
 end
 
 function OneFile:ChampSupported()
@@ -133,6 +133,8 @@ function OneFile:LoadMenu()
 end
 
 function OneFile:LoadScriptChamp()
+   local __require = require
+   local require = function(n) return assert(__require(n)) end
    local n, v = myHero.charName, self.cfg.c.p:Value()
     if n == "Aatrox" then
       if v == 1 then
@@ -645,7 +647,7 @@ function OneFile:LoadUtility()
 	if self.cfg.u.e1:Value() then require('ChallengerHumanizer') end
 	if self.cfg.u.e2:Value() then require('ChallengerActivator') end
 	if self.cfg.u.e3:Value() then require('SL-Evade') end
-	if self.cfg.u.e4:Value() then require("NEET's Trakcer") end
+	if self.cfg.u.e4:Value() then require("NEET's Tracker") end
 end
 
 function OneFile:PrintScriptChange()
