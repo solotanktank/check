@@ -127,9 +127,9 @@ function OneFile:LoadMenu()
 			self.cfg.u:Info("if1", "Day la nhung scripts ho tro")
 			self.cfg.u:Info("if2", "Co the dung cho tat ca tuong")
 			self.cfg.u:Boolean("e1", "Load Challenger Humanizer", true, function() self:PrintUtility(self.cfg.u.e1:Value(), "Challenger Humanizer") end)
-			self.cfg.u:Boolean("e2", "Load Challenger Activator", true, function() self:PrintUtility(self.cfg.u.e4:Value(), "Challenger Activator") end)
-			self.cfg.u:Boolean("e3", "Load SL Evade", true, function() self:PrintUtility(self.cfg.u.e7:Value(), "SL Evade") end)
-			self.cfg.u:Boolean("e4", "Load NEET's Tracker", false, function() self:PrintUtility(self.cfg.u.e8:Value(), "NEET Tracker") end)
+			self.cfg.u:Boolean("e2", "Load Challenger Activator", true, function() self:PrintUtility(self.cfg.u.e2:Value(), "Challenger Activator") end)
+			self.cfg.u:Boolean("e3", "Load SL Evade", true, function() self:PrintUtility(self.cfg.u.e3:Value(), "SL Evade") end)
+			self.cfg.u:Boolean("e4", "Load NEET's Tracker", false, function() self:PrintUtility(self.cfg.u.e4:Value(), "NEET Tracker") end)
 end
 
 function OneFile:LoadScriptChamp()
@@ -652,7 +652,7 @@ end
 
 function OneFile:PrintScriptChange()
     if self.supported[myHero.charName] == nil then return end
-    self:Print("Da chuyen sang su dung script "..self.supported[myHero.charName][self.cfg.c.p:Value()]..". Nhan F6 x2 de thay doi.")
+    self:Print("Da chuyen sang su dung script "..self.supported[myHero.charName][self.cfg.c.p:Value()]..". Nhấn F6 x2 đẻ thay đổi.")
 end
 
 function OneFile:PrintUtility(boolean, text)
@@ -668,10 +668,10 @@ function OneFile:CheckUpdate()
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
     self.Update.ScriptPath = "/solotanktank/Script/master/1 Key To Champion.lua"
     self.Update.SavePath = SCRIPT_PATH.."/1 Key To Champion.lua"
-    self.Update.CallbackUpdate = function(NewVersion) self:Print("Da cap nhat len phien ban "..NewVersion..". F6 x2 de tai lai script.") end
-    self.Update.CallbackNoUpdate = function(NewVersion) self:Print("Ban da su dung phien ban moi nhat ("..NewVersion..")") self:Hello() end
-    self.Update.CallbackNewVersion = function(NewVersion) self:Print("Da tim thay phien ban moi ("..NewVersion.."). Vui long doi cap nhat...") end
-    self.Update.CallbackError = function() self:Print("Da co loi xay ra khi kiem tra cap nhat. Vui long kiem tra lai Internet") end
+    self.Update.CallbackUpdate = function(NewVersion) self:Print("Đã cập nhật lên phiên bản "..NewVersion..". F6 x2 de tai lai script.") end
+    self.Update.CallbackNoUpdate = function(NewVersion) self:Print("Bạn đã sử dụng phiên bản mới nhất ("..NewVersion..")") self:Hello() end
+    self.Update.CallbackNewVersion = function(NewVersion) self:Print("Đã tìm Thấy Phiên bản mới ("..NewVersion.."). Vui lòng đợi cập nhật...") end
+    self.Update.CallbackError = function() self:Print("Đã có lõi xẩy ra khi kiểm tra cập nhật. Vui lòng kiểm tra lại Internet") end
     AutoUpdater(self.Update.ScriptVersion, self.Update.UseHttps, self.Update.Host, self.Update.VersionPath, self.Update.ScriptPath, self.Update.SavePath, self.Update.CallbackUpdate, self.Update.CallbackNoUpdate, self.Update.CallbackNewVersion, self.Update.CallbackError)
 end
 
