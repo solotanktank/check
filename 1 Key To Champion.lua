@@ -13,6 +13,10 @@ function OneFile:__init()
     self:LoadUtility()
 end
 
+function OneFile:Print(text)
+    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> %s</font>",tostring(text)))
+end
+
 function OneFile:ChampSupported()
     self.supported = {
         ["Aatrox"] = {"Toxic Aatrox", "Question Aatrox", "SL Aatrox"},
@@ -116,7 +120,7 @@ function OneFile:ChampSupported()
 end
 
 function OneFile:LoadMenu()
-	self.cfg = MenuConfig("OneFile", "1 Key To Champion")
+	self.cfg = MenuConfig("OneFile", "Script Tong Hop")
 		self.cfg:Menu("c", "Chon script cho "..myHero.charName)
 		if self.supported[myHero.charName] ~= nil then
 			self.cfg.c:DropDown("p", "Chon script:", 1, self.supported[myHero.charName], function() self:PrintScriptChange() end)
@@ -134,7 +138,7 @@ end
 
 function OneFile:LoadScriptChamp()
    local __require = require
-   local require = function(n) return assert(__require(n)) end
+   local require = function(n) if FileExist(SCRIPT_PATH..n..".lua") then assert(__require(n)) else self:Print("Khong co script "..n..".lua trong thu muc 'Scripts' cua GoS. Vui long download script nay hoac chon script khac") end end
    local n, v = myHero.charName, self.cfg.c.p:Value()
     if n == "Aatrox" then
       if v == 1 then
@@ -652,7 +656,7 @@ end
 
 function OneFile:PrintScriptChange()
     if self.supported[myHero.charName] == nil then return end
-    self:Print("Da chuyen sang su dung script "..self.supported[myHero.charName][self.cfg.c.p:Value()]..". Nhấn F6 x2 đẻ thay đổi.")
+    self:Print("Da chuyen sang su dung script "..self.supported[myHero.charName][self.cfg.c.p:Value()]..". Nhan F6 x2 de thay doi.")
 end
 
 function OneFile:PrintUtility(boolean, text)
@@ -662,21 +666,17 @@ end
 
 function OneFile:CheckUpdate()
     self.Update = {}
-    self.Update.ScriptVersion = 6.14
+    self.Update.ScriptVersion = 0.01
     self.Update.UseHttps = true
     self.Update.Host = "raw.githubusercontent.com"
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
-    self.Update.ScriptPath = "/solotanktank/Script/master/1 Key To Champion.lua"
-    self.Update.SavePath = SCRIPT_PATH.."/1 Key To Champion.lua"
-    self.Update.CallbackUpdate = function(NewVersion) self:Print("Đã cập nhật lên phiên bản "..NewVersion..". F6 x2 de tai lai script.") end
-    self.Update.CallbackNoUpdate = function(NewVersion) self:Print("Bạn đã sử dụng phiên bản mới nhất ("..NewVersion..")") self:Hello() end
-    self.Update.CallbackNewVersion = function(NewVersion) self:Print("Đã tìm Thấy Phiên bản mới ("..NewVersion.."). Vui lòng đợi cập nhật...") end
-    self.Update.CallbackError = function() self:Print("Đã có lõi xẩy ra khi kiểm tra cập nhật. Vui lòng kiểm tra lại Internet") end
+    self.Update.ScriptPath = "/solotanktank/Script/master/_AIO_GoS.lua"
+    self.Update.SavePath = SCRIPT_PATH.."/_AIO_GoS.lua"
+    self.Update.CallbackUpdate = function(NewVersion) self:Print("Da cap nhat len phien ban "..NewVersion..". F6 x2 de tai lai script.") end
+    self.Update.CallbackNoUpdate = function(NewVersion) self:Print("Ban da su dung phien ban moi nhat ("..NewVersion..")") self:Hello() end
+    self.Update.CallbackNewVersion = function(NewVersion) self:Print("Da tim thay phien ban moi ("..NewVersion.."). Vui long doi cap nhat...") end
+    self.Update.CallbackError = function() self:Print("Da co loi xay ra khi kiem tra cap nhat. Vui long kiem tra lai Internet") end
     AutoUpdater(self.Update.ScriptVersion, self.Update.UseHttps, self.Update.Host, self.Update.VersionPath, self.Update.ScriptPath, self.Update.SavePath, self.Update.CallbackUpdate, self.Update.CallbackNoUpdate, self.Update.CallbackNewVersion, self.Update.CallbackError)
-end
-
-function OneFile:Print(text)
-    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> %s</font>",tostring(text)))
 end
 
 function OneFile:Hello()
