@@ -116,7 +116,7 @@ function OneFile:ChampSupported()
 end
 
 function OneFile:LoadMenu()
-	self.cfg = MenuConfig("OneFile", "Script Tong Hop")
+	self.cfg = MenuConfig("OneFile", "1 Key To Champion")
 		self.cfg:Menu("c", "Chon script cho "..myHero.charName)
 		if self.supported[myHero.charName] ~= nil then
 			self.cfg.c:DropDown("p", "Chon script:", 1, self.supported[myHero.charName], function() self:PrintScriptChange() end)
@@ -666,8 +666,8 @@ function OneFile:CheckUpdate()
     self.Update.UseHttps = true
     self.Update.Host = "raw.githubusercontent.com"
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
-    self.Update.ScriptPath = "/solotanktank/Script/master/_AIO_GoS.lua"
-    self.Update.SavePath = SCRIPT_PATH.."/_AIO_GoS.lua"
+    self.Update.ScriptPath = "/solotanktank/Script/master/1 Key To Champion.lua"
+    self.Update.SavePath = SCRIPT_PATH.."/1 Key To Champion.lua"
     self.Update.CallbackUpdate = function(NewVersion) self:Print("Da cap nhat len phien ban "..NewVersion..". F6 x2 de tai lai script.") end
     self.Update.CallbackNoUpdate = function(NewVersion) self:Print("Ban da su dung phien ban moi nhat ("..NewVersion..")") self:Hello() end
     self.Update.CallbackNewVersion = function(NewVersion) self:Print("Da tim thay phien ban moi ("..NewVersion.."). Vui long doi cap nhat...") end
