@@ -662,7 +662,7 @@ end
 
 function OneFile:CheckUpdate()
     self.Update = {}
-    self.Update.ScriptVersion = 0.01
+    self.Update.ScriptVersion = 6.14.0
     self.Update.UseHttps = true
     self.Update.Host = "raw.githubusercontent.com"
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
