@@ -101,7 +101,7 @@ function OneFile:ChampSupported()
         ["Volibear"] = {"Meo Volibear", "Platy Volibear"},
         ["Jax"] = {"Grandmaster Jax"},
         ["Riven"] = {"Eternal Riven"},
-        ["MonkeyKing"] = {"Sibyl WuKong"},
+        ["MonkeyKing"] = {"Sibyl WuKong", "Eternal WuKong"},
         ["Trundle"] = {"Eternal Trundle"},
         ["Fiddlesticks"] = {"Platy Fidd"},
         ["Irelia"] = {"QWER Irelia", "Frosted Booty Irelia"},
