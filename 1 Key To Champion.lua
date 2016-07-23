@@ -26,7 +26,7 @@ function OneFile:ChampSupported()
         ["Ahri"] = {"CS Ahri", "GamsOn Ahri"},
         ["Akali"] = {"Shadow Akali", "KMS Akali", "Eternal Akali"},
         ["Alistar"] = {"CS Alistar"},
-        ["Annie"] = {"PAM Annie", "Bored Annie"},
+        ["Annie"] = {"PAM Annie", "Bored Annie", "NEETSeries Annie"},
         ["Ashe"] = {"CS Ashe", "ADC Main Ashe"},
         ["Azir"] = {"CS Azir"},
         ["Blitzcrank"] = {"CS Blitzcrank", "SxcSAIO Blitzcrank", "SL Blitzcrank", "GamsOn Blitzcrank"},
@@ -172,6 +172,8 @@ function OneFile:LoadScriptChamp()
         require('annie')
       elseif v == 2 then
         require('Annie')
+      elseif v == 3 then
+        require('NEETSeries')
       end
     elseif n == "Ashe" then
       if v == 1 then
@@ -669,7 +671,7 @@ end
 
 function OneFile:CheckUpdate()
     self.Update = {}
-    self.Update.ScriptVersion = 0.021
+    self.Update.ScriptVersion = 0.022
     self.Update.UseHttps = true
     self.Update.Host = "raw.githubusercontent.com"
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
