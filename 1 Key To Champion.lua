@@ -137,6 +137,7 @@ function OneFile:LoadMenu()
 			self.cfg.u:Boolean("e2", "Load Challenger Activator", false, function() self:PrintUtility(self.cfg.u.e2:Value(), "Challenger Activator") end)
 			self.cfg.u:Boolean("e3", "Load SL Evade", false, function() self:PrintUtility(self.cfg.u.e3:Value(), "SL-Evade") end)
 			self.cfg.u:Boolean("e4", "Load NEET's Tracker", false, function() self:PrintUtility(self.cfg.u.e4:Value(), "NEET's Tracker") end)
+			self.cfg.u:Boolean("e5", "Load Challenger Stream (tat vong tron)", false, function() self:PrintUtility(self.cfg.u.e5:Value(), "Challenger Stream") end)
 end
 
 function OneFile:LoadScriptChamp()
@@ -657,6 +658,7 @@ function OneFile:LoadUtility()
 	if self.cfg.u.e2:Value() then require('ChallengerActivator') end
 	if self.cfg.u.e3:Value() then require('SL-Evade') end
 	if self.cfg.u.e4:Value() then require("NEET's Tracker") end
+	if self.cfg.u.e5:Value() then require("ChallengerStream") end
 end
 
 function OneFile:PrintScriptChange()
@@ -671,7 +673,7 @@ end
 
 function OneFile:CheckUpdate()
     self.Update = {}
-    self.Update.ScriptVersion = 0.022
+    self.Update.ScriptVersion = 0.023
     self.Update.UseHttps = true
     self.Update.Host = "raw.githubusercontent.com"
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
