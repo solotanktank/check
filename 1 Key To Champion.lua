@@ -141,7 +141,7 @@ function OneFile:LoadMenu()
 end
 
 function OneFile:LoadScriptChamp()
-   local n, v = myHero.charName, self.cfg.c.p:Value()
+   local n, v = myHero.charName, self.cfg.c.p and self.cfg.c.p:Value()
     if n == "Aatrox" then
       if v == 1 then
         require('Toxic Aatrox')
@@ -673,7 +673,7 @@ end
 
 function OneFile:CheckUpdate()
     self.Update = {}
-    self.Update.ScriptVersion = 0.023
+    self.Update.ScriptVersion = 0.024
     self.Update.UseHttps = true
     self.Update.Host = "raw.githubusercontent.com"
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
