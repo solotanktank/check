@@ -3,22 +3,20 @@
     Trang chủ GOS: gamingonsteroids.com
     Script được viết bởi RN. Khi copy/di chuyển vui lòng để lại nguồn
 --------------------------------------------------------------------------------]]
+local function OneFile_Print(text)
+    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> %s</font>",tostring(text)))
+end
+local __require = require
+local require = function(str) assert(FileExist(SCRIPT_PATH..str..".lua"), "\nKhong tim thay file '"..SCRIPT_PATH..str..".lua'\nVui long download script nay hoac chon script khac") __require(str) end
 
 class "OneFile"
 function OneFile:__init()
     self:ChampSupported()
-    self:CheckUpdate()
     self:LoadMenu()
+    self:CheckUpdate()
     self:LoadScriptChamp()
     self:LoadUtility()
 end
-
-local function OneFile_Print(text)
-    PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> %s</font>",tostring(text)))
-end
-
-local __require = require
-local require = function(str) if FileExist(SCRIPT_PATH..str..".lua") then __require(str) else assert(1 == 2, "\nKhong tim thay file '"..SCRIPT_PATH..str..".lua'\nVui long download script nay hoac chon script khac") end end
 
 function OneFile:ChampSupported()
     self.supported = {
@@ -26,7 +24,7 @@ function OneFile:ChampSupported()
         ["Ahri"] = {"CS Ahri", "GamsOn Ahri"},
         ["Akali"] = {"Shadow Akali", "KMS Akali", "Eternal Akali"},
         ["Alistar"] = {"CS Alistar"},
-        ["Annie"] = {"PAM Annie", "Bored Annie", "NEETSeries Annie"},
+        ["Annie"] = {"NEETSeries Annie", "PAM Annie", "Bored Annie"},
         ["Ashe"] = {"CS Ashe", "ADC Main Ashe"},
         ["Azir"] = {"CS Azir"},
         ["Blitzcrank"] = {"CS Blitzcrank", "SxcSAIO Blitzcrank", "SL Blitzcrank", "GamsOn Blitzcrank"},
@@ -47,7 +45,7 @@ function OneFile:ChampSupported()
         ["Kalista"] = {"CS Kalista", "SxcSAIO Kalista", "ADC Main Kalista", "SL Kalista"},
         ["Karma"] = {"Karma Annoying Prick", "Meo Karma"},
         ["Karthus"] = {"Rx Karthus", "Simple Karthus"},
-        ["Katarina"] = {"CS Katarina", "NEETSeries Katarina", "Katarina Easy"},
+        ["Katarina"] = {"NEETSeries Katarina", "CS Katarina", "Katarina Easy"},
         ["Kayle"] = {"Royal Kayle", "Simple Kayle"},
         ["Kennen"] = {"KennenBae"},
         ["KhaZix"] = {"InnateSeries KhaZix"},
@@ -84,7 +82,7 @@ function OneFile:ChampSupported()
         ["Vi"] = {"The Heartbreaker Vi"},
         ["Viktor"] = {"KMS Viktor"},
         ["Vladimir"] = {"Simple Vladimir", "SL Vladimir"},
-        ["Xerath"] = {"NEET Series Xerath", "Simple Xerath"},
+        ["Xerath"] = {"NEETSeries Xerath", "Simple Xerath"},
         ["XinZhao"] = {"Simple XinZhao"},
         ["Yasuo"] = {"KMS Yasuo", "Meo Yasuo"},
         ["Yorick"] = {"The Undefeated Yorick"},
@@ -170,11 +168,11 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Annie" then
       if v == 1 then
-        require('annie')
-      elseif v == 2 then
-        require('Annie')
-      elseif v == 3 then
         require('NEETSeries')
+      elseif v == 2 then
+        require('annie')
+      elseif v == 3 then
+        require('Annie')
       end
     elseif n == "Ashe" then
       if v == 1 then
@@ -304,9 +302,9 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Katarina" then
       if v == 1 then
-        require('ChallengerSeries')
-      elseif v == 2 then
         require('NEETSeries')
+      elseif v == 2 then
+        require('ChallengerSeries')
       elseif v == 3 then
         require('Katarina easy')
       end
@@ -673,7 +671,7 @@ end
 
 function OneFile:CheckUpdate()
     self.Update = {}
-    self.Update.ScriptVersion = 0.024
+    self.Update.ScriptVersion = 0.025
     self.Update.UseHttps = true
     self.Update.Host = "raw.githubusercontent.com"
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
@@ -695,4 +693,4 @@ function OneFile:Hello()
     PrintChat(string.format("<font color=\"#4169E1\"><b>[Script TongHop]:</b></font><font color=\"#FFFFFF\"> Script Được Viết Bởi RN. <u>http://toollienminhmienphi.blogspot.com/</u></font>"))
 end
 
-if OneFile then OneFile() end
+OneFile()
