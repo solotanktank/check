@@ -159,7 +159,7 @@ function OneFile:LoadScriptChamp()
       if v == 1 then
         require('Akali')
       elseif v == 2 then
-        require('KrystraMidBundle')
+        require('KrystraMidBundleNew')
       elseif v == 3 then
         require('Eternal Akali')
       end
@@ -215,7 +215,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Diana" then
       if v == 1 then
-        require('KrystraMidBundle')
+        require('KrystraMidBundleNew')
       end
     elseif n == "DrMundo" then
       if v == 1 then
@@ -225,7 +225,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Diana" then
       if v == 1 then
-        require('KrystraMidBundle')
+        require('KrystraMidBundleNew')
       end
     elseif n == "Elise" then
       if v == 1 then
@@ -235,7 +235,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Diana" then
       if v == 1 then
-        require('KrystraMidBundle')
+        require('KrystraMidBundleNew')
       end
     elseif n == "Ezreal" then
       if v == 1 then
@@ -331,7 +331,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "LeBlanc" then
       if v == 1 then
-        require('KrystraMidBundle')
+        require('KrystraMidBundleNew')
       end
     elseif n == "LeeSin" then
       if v == 1 then
@@ -343,7 +343,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Lissandra" then
       if v == 1 then
-        require('KrystraMidBundle')
+        require('KrystraMidBundleNew')
       end
     elseif n == "Lucian" then
       if v == 1 then
@@ -391,7 +391,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Oriana" then
       if v == 1 then
-        require('KrystraMidBundle')
+        require('KrystraMidBundleNew')
       end
     elseif n == "Poppy" then
       if v == 1 then
@@ -447,7 +447,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "TwistedFate" then
       if v == 1 then
-        require('KrystraMidBundle')
+        require('KrystraMidBundleNew')
       end
     elseif n == "Twick" then
       if v == 1 then
@@ -479,7 +479,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Viktor" then
       if v == 1 then
-        require('KrystraMidBundle')
+        require('KrystraMidBundleNew')
       end
     elseif n == "Vladimir" then
       if v == 1 then
@@ -499,7 +499,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Yasuo" then
       if v == 1 then
-        require('KrystraMidBundle')
+        require('KrystraMidBundleNew')
       elseif v == 2 then
         require('Project Yasuo')
       end
@@ -513,7 +513,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Zed" then
       if v == 1 then
-        require('KrystraMidBundle')
+        require('KrystraMidBundleNew')
       elseif v == 2 then
         require('Zed')
       end
