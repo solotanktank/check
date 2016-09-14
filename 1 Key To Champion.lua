@@ -434,7 +434,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Syndra" then
       if v == 1 then
-        require('Syndra')
+        require('Syndra_LBSeries_ALPHA')
       end
     elseif n == "Teemo" then
       if v == 1 then
