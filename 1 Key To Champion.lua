@@ -32,7 +32,7 @@ function OneFile:ChampSupported()
         ["Darius"] = {"Simple Darius", "Icy Darius"},
         ["Diana"] = {"KMS Diana"},
         ["DrMundo"] = {"SxcSAIO Mundo", "Cloud Mundo"},
-        ["Draven"] = {"CS Draven", "Cloud Draven"},
+        ["Draven"] = {"CS Draven", "Eternal Draven"},
         ["Elise"] = {"Steroided Spider Elise", "QWER Elise"},
         ["Evelynn"] = {"Spooks Master Evelynn"},
         ["Ezreal"] = {"ADC Main Ezreal", "SxcSAIO Ezreal", "Eternal Ezreal"},
@@ -66,10 +66,11 @@ function OneFile:ChampSupported()
         ["Poppy"] = {"SxcSAIO Poppy", "QWER Poppy"},
         ["Rengar"] = {"The Pridestalker Rengar", "Cloud Rengar"},
         ["Rumble"] = {"SxcSAIO Rumble"},
-        ["Ryze"] = {"Noddy Ryze", "Corrupt Ryze"},
+        ["Ryze"] = {"OpenPredict Ryze", "Corrupt Ryze"},"Ryze"},
         ["Sona"] = {"Rx Sona"},
         ["Soraka"] = {"SxcSAIO Soraka", "SL Soraka"},
         ["Swain"] = {"SxcSAIO Swain"},
+        ["Syndra"] = {"Premium Syndra"},
         ["Teemo"] = {"OK Teemo"},
         ["Thresh"] = {"SxcSAIO Thresh"},
         ["Tristana"] = {"ADC Main Tristana"},
@@ -205,7 +206,7 @@ function OneFile:LoadScriptChamp()
       if v == 1 then
         require('ChallengerSeries')
       elseif v == 2 then
-        require('Draven')
+        require('EternalDraven')
       end
     elseif n == "Darius" then
       if v == 1 then
@@ -411,9 +412,11 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Ryze" then
       if v == 1 then
-        require('Ryze')
+        require('IcyRyze')
       elseif v == 2 then
         require('CorruptRyze')
+      elseif v == 3 then
+        require('Ryze')  
       end
     elseif n == "Sona" then
       if v == 1 then
@@ -428,6 +431,10 @@ function OneFile:LoadScriptChamp()
     elseif n == "Swain" then
       if v == 1 then
         require('SxcSAIO')
+      end
+    elseif n == "Syndra" then
+      if v == 1 then
+        require('Syndra')
       end
     elseif n == "Teemo" then
       if v == 1 then
@@ -449,7 +456,7 @@ function OneFile:LoadScriptChamp()
       if v == 1 then
         require('KrystraMidBundleNew')
       end
-    elseif n == "Twick" then
+    elseif n == "Twitch" then
       if v == 1 then
         require('ADC Main')
       end
@@ -673,7 +680,7 @@ end
 
 function OneFile:CheckUpdate()
     self.Update = {}
-    self.Update.ScriptVersion = 0.027
+    self.Update.ScriptVersion = 0.028
     self.Update.UseHttps = true
     self.Update.Host = "raw.githubusercontent.com"
     self.Update.VersionPath = "/solotanktank/Script/master/ScriptTongHop.version"
