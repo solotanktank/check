@@ -66,7 +66,7 @@ function OneFile:ChampSupported()
         ["Poppy"] = {"SxcSAIO Poppy", "QWER Poppy"},
         ["Rengar"] = {"The Pridestalker Rengar", "Cloud Rengar"},
         ["Rumble"] = {"SxcSAIO Rumble"},
-        ["Ryze"] = {"OpenPredict Ryze", "Corrupt Ryze","Ryze"},
+        ["Ryze"] = {"OpenPredict Ryze","Corrupt Ryze","ARyze"},
         ["Sona"] = {"Rx Sona"},
         ["Soraka"] = {"SxcSAIO Soraka", "SL Soraka"},
         ["Swain"] = {"SxcSAIO Swain"},
