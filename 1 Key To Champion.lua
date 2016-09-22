@@ -21,7 +21,7 @@ end
 function OneFile:ChampSupported()
     self.supported = {
         ["Aatrox"] = {"Toxic Aatrox", "Question Aatrox", "SL Aatrox"},
-        ["Ahri"] = {"CS Ahri", "GamsOn Ahri"},
+        ["Ahri"] = {"CS Ahri"},
         ["Akali"] = {"Shadow Akali", "KMS Akali", "Eternal Akali"},
         ["Alistar"] = {"CS Alistar"},
         ["Annie"] = {"NEETSeries Annie", "PAM Annie", "Bored Annie"},
@@ -152,9 +152,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Ahri" then
       if v == 1 then
-        require('ChallengerSeries')
-      elseif v == 2 then
-        require('GSR Ahri')
+        require('ChallengerSeriesReborn')
       end
     elseif n == "Akali" then
       if v == 1 then
