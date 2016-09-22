@@ -150,7 +150,7 @@ function OneFile:LoadScriptChamp()
       elseif v == 3 then
         require('SL-Series')
       end
-    elseif n == "Aatrox" then
+    elseif n == "Ahri" then
       if v == 1 then
         require('ChallengerSeries')
       elseif v == 2 then
