@@ -20,60 +20,76 @@ end
 
 function OneFile:ChampSupported()
     self.supported = {
-        ["Aatrox"] = {"Toxic Aatrox", "Question Aatrox", "SL Aatrox"},
+        ["Aatrox"] = {"Question Aatrox", "Toxic Aatrox", "SL Aatrox"},
         ["Ahri"] = {"CS Ahri"},
-        ["Akali"] = {"Shadow Akali", "KMS Akali", "Eternal Akali"},
+        ["Akali"] = {"KMS Akali", "Shadow Akali", "Eternal Akali"},
         ["Alistar"] = {"CS Alistar"},
-        ["Annie"] = {"NEETSeries Annie", "PAM Annie", "Bored Annie"},
+        ["Annie"] = {"NEETSeries Annie", "PlatyAnnie"},
         ["Ashe"] = {"CS Ashe", "ADC Main Ashe"},
         ["Azir"] = {"CS Azir"},
+        ["Amumu"] = {"SadisticAmumu","CSR Amumu"},
         ["Blitzcrank"] = {"CS Blitzcrank", "SxcSAIO Blitzcrank", "SL Blitzcrank", "GamsOn Blitzcrank"},
+        ["Bard"] = {"bardBae"},
+        ["Brand"] = {"LB SERIES"},
+        ["Caitlyn"] = {"ADC Main"},
         ["Corki"] = {"SxcSAIO Corki", "ADC Main Corki"},
-        ["Darius"] = {"Simple Darius", "Icy Darius"},
-        ["Diana"] = {"KMS Diana"},
+        ["Darius"] = {"Simple Darius"},
+        ["Diana"] = {"KMS Diana","Moonwalker"},
         ["DrMundo"] = {"SxcSAIO Mundo", "Cloud Mundo"},
         ["Draven"] = {"CS Draven", "Eternal Draven"},
         ["Elise"] = {"Steroided Spider Elise", "QWER Elise"},
         ["Evelynn"] = {"Spooks Master Evelynn"},
         ["Ezreal"] = {"ADC Main Ezreal", "SxcSAIO Ezreal", "Eternal Ezreal"},
-        ["Fiora"] = {"Simple Fiora"},
+        ["Fiddlesticks"] = {"Fiddlesticks"},
+        ["Fiora"] = {"Simple Fiora","Simple Fiora Combo"},
         ["Fizz"] = {"Toxic Fizz"},
         ["Garen"] = {"Simple Garen", "SxcSAIO Garen", "Garen AutoUlt", "Icy Garen"},
         ["Graves"] = {"ADC Main Graves"},
+        ["Hecarim"] = {"Hecarim"},
+        ["Illaoi"] = {"MvP Illaoi"},
+        ["Irelia"] = {"EternalAIO Irelia"},
+        ["Jarvan IV"] = {"JarvanIVBae"},
+        ["Jax"] = {"Grandmaster Jax"},
         ["Jhin"] = {"Royal Jhin", "High Noon Jhin"},
         ["Jinx"] = {"SxcSAIO Jinx", "SL Jinx"},
-        ["Kalista"] = {"CS Kalista", "SxcSAIO Kalista", "ADC Main Kalista", "SL Kalista"},
+        ["Kalista"] = {"SxcSAIO Kalista", "ADC Main Kalista", "SL Kalista"},
         ["Karma"] = {"Karma Annoying Prick", "Meo Karma"},
         ["Karthus"] = {"Rx Karthus", "Simple Karthus"},
+        ["Kassadin"] = {"Kassadin - The Void Walker"},
         ["Katarina"] = {"NEETSeries Katarina", "CS Katarina", "Katarina Easy"},
         ["Kayle"] = {"Royal Kayle", "Simple Kayle"},
-        ["Kennen"] = {"KennenBae"},
-        ["KhaZix"] = {"InnateSeries KhaZix"},
-        ["KogMaw"] = {"NEETSeries Kog'Maw", "SxcSAIO Kog'Maw"},
-        ["LeBlanc"] = {"KMS LeBlanc"},
+        ["Kennen"] = {"KennenBae","ADC Main"},
+        ["Kindred"] = {"|SL| Kindred","Eternal Kindred"},
+        ["Kled"] = {"JungleBundle"},
+        ["KogMaw"] = {"NEETSeries Kog'Maw", "SxcSAIO Kog'Maw","KogMaw"},
+        ["LeBlanc"] = {"KMS LeBlanc","LB SERIES"},
         ["LeeSin"] = {"CS Lee Sin"},
         ["Leona"] = {"SxcSAIO Leona"},
         ["Lissandra"] = {"KMS Lissandra"},
-        ["Lucian"] = {"ADC Main Lucian", "Cloud Lucian"},
+        ["Lucian"] = {"Lucian"},
         ["Lulu"] = {"LuluBae"},
         ["Lux"] = {"ILux", "SxcSAIO Lux"},
+        ["Malphite"] = {"Eternal Malphite", "EternalAIO Malphite"},
+        ["Malzahar"] = {"EvolvedMalzahar"},
         ["MasterYi"] = {"Alpha Strike MasterYi"},
         ["MissFortune"] = {"ADC Main Miss Fortune"},
         ["Morgana"] = {"InnateSeries Morgana", "Meo Morgana"},
         ["Nami"] = {"SxcSAIO Nami", "Meo Nami"},
         ["Nasus"] = {"Siphoning Strikes", "SxcSAIO Nasus", "SL Nasus"},
+        ["Nautilus"] = {"The Titan Of The Depths"},
         ["Oriana"] = {"KMS Oriana"},
-        ["Poppy"] = {"SxcSAIO Poppy", "QWER Poppy"},
+        ["Poppy"] = {"SxcSAIO Poppy"},
         ["Rengar"] = {"The Pridestalker Rengar", "Cloud Rengar"},
         ["Rumble"] = {"SxcSAIO Rumble"},
         ["Ryze"] = {"OpenPredict Ryze","Corrupt Ryze","ARyze"},
         ["Sona"] = {"Rx Sona"},
         ["Soraka"] = {"SxcSAIO Soraka", "SL Soraka"},
         ["Swain"] = {"SxcSAIO Swain"},
-        ["Syndra"] = {"Premium Syndra"},
-        ["Teemo"] = {"OK Teemo"},
+        ["Tahm Kench"] = {"Tahm Kench"},
+        ["Taliyah"] = {"Taliyah"},
+        ["Teemo"] = {"OK Teemo","1 minute teemo"},
         ["Thresh"] = {"SxcSAIO Thresh"},
-        ["Tristana"] = {"ADC Main Tristana"},
+        ["Tristana"] = {"BNN Tristana"},
         ["Tryndamere"] = {"Simple Tryndamere"},
         ["TwistedFate"] = {"KMS Twisted Fate"},
         ["Twitch"] = {"ADC Main Twitch"},
@@ -84,28 +100,29 @@ function OneFile:ChampSupported()
         ["Viktor"] = {"KMS Viktor"},
         ["Vladimir"] = {"Simple Vladimir", "SL Vladimir"},
         ["Xerath"] = {"NEETSeries Xerath", "Simple Xerath"},
-        ["XinZhao"] = {"Simple XinZhao"},
+        ["Xin Zhao"] = {"Simple XinZhao","1 hour Xin Zhao"},
         ["Yasuo"] = {"KMS Yasuo", "Meo Yasuo"},
         ["Yorick"] = {"The Undefeated Yorick"},
         ["Zac"] = {"Elastic Slingshot Zac"},
         ["Zed"] = {"KMS Zed", "Zed Shadow"},
         ["Ziggs"] = {"EloBommer Ziggs"},
-        ["Zilean"] = {"Rx Zilean", "Meo Zilean"},
-        ["Kindred"] = {"SL Kindred", "QWER Kindred", "Eternal Kindred"},
-        ["Sivir"] = {"SL Sivir", "ADC Main Sivir"},
-        ["Velkoz"] = {"SL Velkoz", "Cloud Velkoz"},
+        ["Zilean"] = {"Rx Zilean"},
+        ["Zyra"] = {"QWER Series"},
+        ["Sivir"] = {"SL Sivir"},
+        ["Velkoz"] = {"SL Velkoz"},
         ["Taliyah"] = {"Platy Taliyah"},
         ["Nautilus"] = {"Meo Nautilus"},
         ["Braum"] = {"Meo Braum"},
-        ["Volibear"] = {"Meo Volibear", "Platy Volibear"},
+        ["Volibear"] = {"Volibear"},
         ["Jax"] = {"Grandmaster Jax"},
-        ["Riven"] = {"Eternal Riven"},
+        ["Riven"] = {"Eternal Riven","Eternal Riven Reborn"},
         ["MonkeyKing"] = {"Sibyl WuKong", "Eternal WuKong"},
         ["Trundle"] = {"Eternal Trundle"},
         ["Fiddlesticks"] = {"Platy Fidd"},
         ["Irelia"] = {"QWER Irelia", "Frosted Booty Irelia"},
         ["Nidalee"] = {"QWER Nidalee"},
-        ["Olaf"] = {"Olaf the Berserker"},
+        ["Nocturne"] = {"|SL| Nocturne"},
+        ["Pantheon"] = {"Pantheon"},
         ["Cassiopeia"] = {"Zeyx Cassiopeia"},
         ["Talon"] = {"LB Talon"},
         ["Gangplank"] = {"Cloud Gangplank"},
@@ -117,6 +134,7 @@ function OneFile:ChampSupported()
         ["Taric"] = {"Taric Bae"},
         ["Janna"] = {"Meo Janna"},
         ["Udyr"] = {"Cloud Udyr"},
+        ["Urgot"] = {"Urgot"},
         ["Malphite"] = {"Custom Malphite"}
     }
 end
@@ -144,9 +162,9 @@ function OneFile:LoadScriptChamp()
    local n, v = myHero.charName, self.cfg.c.p and self.cfg.c.p:Value()
     if n == "Aatrox" then
       if v == 1 then
-        require('Toxic Aatrox')
-      elseif v == 2 then
         require('Questionmark')
+      elseif v == 2 then
+        require('Toxic Aatrox')
       elseif v == 3 then
         require('SL-Series')
       end
@@ -156,33 +174,45 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Akali" then
       if v == 1 then
-        require('Akali')
-      elseif v == 2 then
         require('KrystraMidBundleNew')
+      elseif v == 2 then
+        require('Akali')
       elseif v == 3 then
         require('Eternal Akali')
       end
     elseif n == "Alistar" then
       if v == 1 then
-        require('ChallengerSeries')
+        require('ChallengerSeriesReborn')
       end
     elseif n == "Annie" then
       if v == 1 then
         require('NEETSeries')
       elseif v == 2 then
         require('annie')
-      elseif v == 3 then
-        require('Annie')
       end
     elseif n == "Ashe" then
       if v == 1 then
-        require('ChallengerSeries')
+        require('ChallengerSeriesReborn')
       elseif v == 2 then
         require('ADC Main')
       end
     elseif n == "Azir" then
       if v == 1 then
         require('ChallengerSeries')
+      end
+    elseif n == "Amumu" then
+      if v == 1 then
+        require('SadisticAmumu')
+       elseif v == 2 then
+        require('ChallengerSeriesReborn')
+      end
+    elseif n == "Bard" then
+      if v == 1 then
+        require('bardBae')
+      end
+    elseif n == "Brand" then
+      if v == 1 then
+        require('Brand_LBSeries')
       end
     elseif n == "Blitzcrank" then
       if v == 1 then
@@ -193,6 +223,10 @@ function OneFile:LoadScriptChamp()
         require('SL-Series')
       elseif v == 4 then
         require('Blitzcrank')
+      end
+   elseif n == "Caitlyn" then
+      if v == 1 then
+        require('ADC Main')
       end
     elseif n == "Corki" then
       if v == 1 then
@@ -209,12 +243,12 @@ function OneFile:LoadScriptChamp()
     elseif n == "Darius" then
       if v == 1 then
         require('simple darius')
-      elseif v == 2 then
-        require('IcyDarius')
       end
     elseif n == "Diana" then
       if v == 1 then
         require('KrystraMidBundleNew')
+      elseif v == 2 then
+        require('Diana')  
       end
     elseif n == "DrMundo" then
       if v == 1 then
@@ -222,19 +256,11 @@ function OneFile:LoadScriptChamp()
       elseif v == 2 then
         require('Mundo')
       end
-    elseif n == "Diana" then
-      if v == 1 then
-        require('KrystraMidBundleNew')
-      end
     elseif n == "Elise" then
       if v == 1 then
         require('Elise')
       elseif v == 2 then
         require('QWER Series')
-      end
-    elseif n == "Diana" then
-      if v == 1 then
-        require('KrystraMidBundleNew')
       end
     elseif n == "Ezreal" then
       if v == 1 then
@@ -244,9 +270,15 @@ function OneFile:LoadScriptChamp()
       elseif v == 3 then
         require('Eternal Ezreal')
       end
+    elseif n == "Fiddlesticks" then
+      if v == 1 then
+        require('Fiddle')
+      end
     elseif n == "Fiora" then
       if v == 1 then
         require('simple fiora')
+       elseif v == 2 then
+        require('simple Fiora Combo')
       end
     elseif n == "Fizz" then
       if v == 1 then
@@ -264,7 +296,27 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Graves" then
       if v == 1 then
-        require('ADC Main')
+        require('Graves')
+      end
+    elseif n == "Hecarim" then
+      if v == 1 then
+        require('Hecarim')
+      end
+    elseif n == "Illaoi" then
+      if v == 1 then
+        require('IllaoiGod')
+      end
+    elseif n == "Irelia" then
+      if v == 1 then
+        require('EternalAIO')
+      end
+    elseif n == "Jarvan IV" then
+      if v == 1 then
+        require('jarvanivBae')
+      end
+    elseif n == "Jax" then
+      if v == 1 then
+        require('Jax')
       end
     elseif n == "Jhin" then
       if v == 1 then
@@ -280,12 +332,10 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Kalista" then
       if v == 1 then
-        require('ChallengerSeries')
-      elseif v == 2 then
         require('SxcSAIO')
-      elseif v == 3 then
+      elseif v == 2 then
         require('ADC Main')
-      elseif v == 4 then
+      elseif v == 3 then
         require('SL-Series')
       end
     elseif n == "Karma" then
@@ -299,6 +349,10 @@ function OneFile:LoadScriptChamp()
         require('Karthus')
       elseif v == 2 then
         require('simple karthus')
+      end
+     elseif n == "Kassadin" then
+      if v == 1 then
+        require('Kassadin')
       end
     elseif n == "Katarina" then
       if v == 1 then
@@ -317,20 +371,32 @@ function OneFile:LoadScriptChamp()
     elseif n == "Kennen" then
       if v == 1 then
         require('kennenBae')
+      elseif v == 2 then
+        require('ADC Main')
       end
-    elseif n == "KhaZix" then
+    elseif n == "Kindred" then
       if v == 1 then
-        require('IS_khazix')
+        require('SL-Series')
+      elseif v == 2 then
+        require('EternalKindred')
+      end
+    elseif n == "Kled" then
+      if v == 1 then
+        require('JungleBundle')
       end
     elseif n == "KogMaw" then
       if v == 1 then
         require('NEETSeries')
       elseif v == 2 then
         require('SxcSAIO')
+      elseif v == 3 then
+        require('KogMaw')
       end
     elseif n == "LeBlanc" then
       if v == 1 then
         require('KrystraMidBundleNew')
+      elseif v == 2 then
+        require('LeBlanc_LBSeries')
       end
     elseif n == "LeeSin" then
       if v == 1 then
@@ -346,8 +412,6 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Lucian" then
       if v == 1 then
-        require('ADC Main')
-      elseif v == 2 then
         require('Lucian')
       end
     elseif n == "Lulu" then
@@ -360,13 +424,23 @@ function OneFile:LoadScriptChamp()
       elseif v == 2 then
         require('SxcSAIO')
       end
+    elseif n == "Malphite" then
+      if v == 1 then
+        require('CustomMalphite')
+      elseif v == 2 then
+        require('EternalAIO')
+      end
+    elseif n == "Malzahar" then
+      if v == 1 then
+        require('EvolvedMalzahar')
+      end
     elseif n == "MasterYi" then
       if v == 1 then
         require('MasterYi')
       end
     elseif n == "MissFortune" then
       if v == 1 then
-        require('ADC Main')
+        require('MissFortune')
       end
     elseif n == "Morgana" then
       if v == 1 then
@@ -388,6 +462,10 @@ function OneFile:LoadScriptChamp()
       elseif v == 3 then
         require('SL-Series')
       end
+    elseif n == "Nautilus" then
+      if v == 1 then
+        require('Nautilus')
+      end
     elseif n == "Oriana" then
       if v == 1 then
         require('KrystraMidBundleNew')
@@ -395,8 +473,6 @@ function OneFile:LoadScriptChamp()
     elseif n == "Poppy" then
       if v == 1 then
         require('SxcSAIO')
-      elseif v == 2 then
-        require('QWER Series')
       end
     elseif n == "Rengar" then
       if v == 1 then
@@ -430,13 +506,19 @@ function OneFile:LoadScriptChamp()
       if v == 1 then
         require('SxcSAIO')
       end
-    elseif n == "Syndra" then
+    elseif n == "Tahm Kench" then
       if v == 1 then
-        require('Syndra_LBSeries_ALPHA')
+        require('Kench')
+      end
+    elseif n == "Taliyah" then
+      if v == 1 then
+        require('Taliyah')
       end
     elseif n == "Teemo" then
       if v == 1 then
         require('Teemo')
+      elseif v == 2 then
+        require('1 minute teemo')
       end
     elseif n == "Thresh" then
       if v == 1 then
@@ -444,7 +526,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Tristana" then
       if v == 1 then
-        require('ADC Main')
+        require('BNN Tristana')
       end
     elseif n == "Tryndamere" then
       if v == 1 then
@@ -498,9 +580,11 @@ function OneFile:LoadScriptChamp()
       elseif v == 2 then
         require('simple xerath')
       end
-    elseif n == "XinZhao" then
+    elseif n == "Xin Zhao" then
       if v == 1 then
         require('simple xinZhao')
+      elseif v == 2 then
+        require('xin')
       end
     elseif n == "Yasuo" then
       if v == 1 then
@@ -529,8 +613,10 @@ function OneFile:LoadScriptChamp()
     elseif n == "Zilean" then
       if v == 1 then
         require('RxZilean')
-      elseif v == 2 then
-        require('Support Bundle')
+      end
+    elseif n == "Zyra" then
+      if v == 1 then
+        require('QWER Series')
       end
     elseif n == "Gangplank" then
       if v == 1 then
@@ -544,25 +630,17 @@ function OneFile:LoadScriptChamp()
       if v == 1 then
         require('Udyr')
       end
+    elseif n == "Urgot" then
+      if v == 1 then
+        require('Urgot')
+      end
     elseif n == "Velkoz" then
       if v == 1 then
         require('SL-Series')
-      elseif v == 2 then
-        require('Velkoz')
-      end
-    elseif n == "Kindred" then
-      if v == 1 then
-        require('SL-Series')
-      elseif v == 2 then
-        require('QWER Series')
-      elseif v == 3 then
-        require('Eternal Kindred')
       end
     elseif n == "Sivir" then
       if v == 1 then
         require('SL-Series')
-      elseif v == 2 then
-        require('ADC Main')
       end
     elseif n == "Nautilus" then
       if v == 1 then
@@ -574,9 +652,7 @@ function OneFile:LoadScriptChamp()
       end
     elseif n == "Volibear" then
       if v == 1 then
-        require('Support Bundle')
-      elseif v == 2 then
-        require('')
+        require('Volibear')
       end
     elseif n == "Taliyah" then
       if v == 1 then
@@ -593,6 +669,8 @@ function OneFile:LoadScriptChamp()
     elseif n == "Riven" then
       if v == 1 then
         require('CustomRiven')
+        elseif v == 2 then
+        require('EternalAIO')
       end
     elseif n == "MonkeyKing" then
       if v == 1 then
@@ -622,9 +700,13 @@ function OneFile:LoadScriptChamp()
       if v == 1 then
         require('QWER Series')
       end
-    elseif n == "Olaf" then
+    elseif n == "Nocturne" then
       if v == 1 then
-        require('Olaf')
+        require('SL-Series')
+      end
+    elseif n == "Pantheon" then
+      if v == 1 then
+        require('Pantheon')
       end
     elseif n == "Cassiopeia" then
       if v == 1 then
