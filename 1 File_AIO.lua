@@ -102,18 +102,13 @@ local ScriptData = {
     },
 
     ["Evelynn"] = {
-        [1] = { },
-        [2] = { }
+        [1] = {"The SM Evelynn"},
+        [2] = {"eve"}
     },
 
     ["Ezreal"] = {
-        [1] = { },
-        [2] = { }
-    },
-
-    ["Fiddlesticks"] = {
-        [1] = {"The SM Evelynn"},
-        [2] = {"eve"}
+        [1] = {"ADCMain Ezreal"},
+        [2] = {"ADC Main"}
     },
 
     ["Garen"] = {
