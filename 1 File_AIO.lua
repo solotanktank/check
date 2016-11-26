@@ -360,7 +360,8 @@ if ChampTable then
 else
     STHMenu:Info("NotSupported", "Tuong hien tai chua co script")
 end
-STHMenu:Info("sv", "STH Version: "..STH_Ver)
+STHMenu:Info("ver", "STH Version: "..STH_Ver)
+STHMenu:Info("author", "Script was written by NAV")
 
 OnLoad(function()
     GetWebResultAsync("https://raw.githubusercontent.com/solotanktank/Script/master/ScriptTongHop.version", function(OnlineV)
